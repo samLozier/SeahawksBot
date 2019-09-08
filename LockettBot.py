@@ -2,12 +2,11 @@ import praw
 import time
 import creds
 
-reddit = praw.Reddit(client_id=creds['client_id'],
-                     client_secret=creds['client_secret'],
-                     password=creds['password'],
-                     user_agent=creds['user_agent'],
-                     username=creds['username'])
-
+reddit = praw.Reddit(client_id=creds.creds['client_id'],
+                     client_secret=creds.creds['client_secret'],
+                     password=creds.creds['password'],
+                     user_agent=creds.creds['user_agent'],
+                     username=creds.creds['username'])
 
 def search():
     prev_ids = open('commentid.txt', "a+")
@@ -37,18 +36,11 @@ def search():
                     reply_log.write(replied_to)
                     prev_ids.write(comment_id)
                 except:
-                    continue  # Leave the function if error occurs with replying
-
+                    continue
     prev_ids.close()
     reply_log.close()
 
 
-
-
-
-
-
 while True:
     search()
-    time.sleep(5)
-
+    time.sleep(10)
