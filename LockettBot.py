@@ -43,4 +43,4 @@ def search():
 
 while True:
     search()
-    time.sleep(10)
+    
