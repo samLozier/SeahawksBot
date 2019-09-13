@@ -23,7 +23,7 @@ def search():
             found = str(body.find('lockette'))
             ricardo = str(body.find('ricardo'))
             print(body)
-            if found != '-1' and ricardo == '-1' and author != 'LocketteBot':  # Looks like the comment references the wrong player
+            if found != '-1' and ricardo == '-1' and author != 'Seahawks_Bot12':  # Looks like the comment references the wrong player
                 try:
                     results.reply("I'm the Seahawks bot, here to help you spell player names and maybe do other useful things in the future."
                                   ""
