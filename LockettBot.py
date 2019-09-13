@@ -26,7 +26,7 @@ def search():
             if found != '-1' and ricardo == '-1' and author != 'LocketteBot':  # Looks like the comment references the wrong player
                 try:
                     results.reply("I'm the Lockett(e) bot. You typed Lockett**e** but you might have meant to type **Lockett** (no 'e')\n\n"
-                                  "**[Ricardo Lockette](https://en.wikipedia.org/wiki/Ricardo_Lockette)** was on the superbowl winning team but last played in 2015 after suffering a neck injury\n\n"
+                                  "**[Ricardo Lockette](https://en.wikipedia.org/wiki/Ricardo_Lockette)** was on the superbowl winning team but last played in 2015 before suffering a neck injury\n\n"
                                   "**[Tyler Lockett](https://en.wikipedia.org/wiki/Tyler_Lockett)** Is the current #1 Receiver on the team, he also spells his name differently."
                                   )
                     replied_to = {
