@@ -1,4 +1,5 @@
 import praw
+import datetime
 import time
 import creds
 
@@ -37,10 +38,8 @@ def search():
                     prev_ids.write(comment_id)
                 except:
                     continue
+    reply_log.write(datetime.datetime.now(), ' - End of loop')
     prev_ids.close()
     reply_log.close()
 
-
-while True:
-    search()
-    
+search()
