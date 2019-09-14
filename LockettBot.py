@@ -1,3 +1,4 @@
+
 import praw
 import datetime
 import time
@@ -22,7 +23,7 @@ def search():
         else:
             found = str(body.find('lockette'))
             ricardo = str(body.find('ricardo'))
-            print(body)
+            #print(body)
             if found != '-1' and ricardo == '-1' and author != 'Seahawks_Bot12':  # Looks like the comment references the wrong player
                 try:
                     results.reply("I'm the Seahawks bot, here to help you spell player names and maybe do other useful things in the future."
@@ -43,5 +44,6 @@ def search():
     reply_log.write(f'{datetime.datetime.now()} - End of loop\n')
     prev_ids.close()
     reply_log.close()
+
 
 search()
