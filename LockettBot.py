@@ -46,7 +46,7 @@ def search():
                 except:
                     continue
 
-    reply_log.write(f'{datetime.datetime.now()} - End of loop')
+    reply_log.write(f'{datetime.datetime.now()} - End of loop\n')
     prev_ids.close()
     reply_log.close()
 
