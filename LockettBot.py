@@ -31,8 +31,8 @@ def search():
             #print(body)
             if found != '-1' and ricardo == '-1' and author != 'Seahawks_Bot12':  # Looks like the comment references the wrong player
                 try:
-                    results.reply("I'm the Seahawks bot, here to help you spell player names and maybe do other useful things in the future."
-                                  ""
+                    results.reply("I'm the Seahawks bot, here to help you spell player names and maybe do other useful things in the future.\n\n"
+                                  "\n\n"
                                   "You typed Lockett**e** but you might have meant to type **Lockett** (no 'e')\n\n"
                                   "**[Ricardo Lockette](https://en.wikipedia.org/wiki/Ricardo_Lockette)** was on the superbowl winning team but last played in 2015 before suffering a neck injury\n\n"
                                   "**[Tyler Lockett](https://en.wikipedia.org/wiki/Tyler_Lockett)** Is the current #1 Receiver on the team, he also spells his name differently."
