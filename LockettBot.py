@@ -2,6 +2,7 @@
 import praw
 import datetime
 import time
+import json
 import creds
 import os
 
@@ -41,8 +42,8 @@ def search():
                         'author': author,
                         'body': body
                     }
-                    reply_log.write(replied_to)
-                    prev_ids.write(comment_id)
+                    reply_log.write(json.dumps(replied_to))
+                    prev_ids.write(json.dumps(comment_id))
                 except:
                     continue
 
