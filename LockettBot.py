@@ -41,9 +41,10 @@ def search():
                     prev_ids.write(comment_id)
                 except:
                     continue
+
     reply_log.write(f'{datetime.datetime.now()} - End of loop\n')
     prev_ids.close()
     reply_log.close()
-
+    print(f'{datetime.datetime.now()} - End of loop\n')
 
 search()
