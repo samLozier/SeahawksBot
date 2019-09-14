@@ -3,6 +3,9 @@ import praw
 import datetime
 import time
 import creds
+import os
+
+rootpath = os.getcwd()
 
 reddit = praw.Reddit(client_id=creds.creds['client_id'],
                      client_secret=creds.creds['client_secret'],
@@ -10,9 +13,10 @@ reddit = praw.Reddit(client_id=creds.creds['client_id'],
                      user_agent=creds.creds['user_agent'],
                      username=creds.creds['username'])
 
+
 def search():
-    prev_ids = open('commentid.txt', "a+")
-    reply_log = open("reply_log.txt", "a+")
+    prev_ids = open(os.path.join(rootpath, 'commentid.txt'), "a+")
+    reply_log = open(os.path.join(rootpath, "reply_log.txt"), "a+")
     for results in reddit.subreddit(
             'Seahawks').comments():  # Grab all the Recent Comments in every subreddit. This will return 100 of the newest comments on Reddit
         body = results.body.lower()   # Grab the Comment
