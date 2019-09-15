@@ -1,8 +1,6 @@
 
 import praw
 import datetime
-import time
-import json
 import creds
 import os
 
@@ -28,8 +26,7 @@ def search():
         else:
             found = str(body.find('lockette'))
             ricardo = str(body.find('ricardo'))
-            #print(body)
-            if found != '-1' and ricardo == '-1' and author != 'Seahawks_Bot12':  # Looks like the comment references the wrong player
+            if found != '-1' and ricardo == '-1' and author != 'seahawks_bot12':  # Looks like the comment references the wrong player
                 try:
                     results.reply("I'm the Seahawks bot, here to help you spell player names and maybe do other useful things in the future.\n\n"
                                   "\n\n"
@@ -42,13 +39,14 @@ def search():
                         'author': author,
                         'body': body
                     }
-                    reply_log.write(json.dumps(replied_to))
-                    prev_ids.write(json.dumps(comment_id))
+                    reply_log.write(str(replied_to)+'\n')
+                    prev_ids.write(str(comment_id)+'\n')
                 except:
                     continue
 
     reply_log.write(f'{datetime.datetime.now()} - End of loop\n')
     prev_ids.close()
     reply_log.close()
+
 
 search()
